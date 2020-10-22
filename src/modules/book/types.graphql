@@ -1,0 +1,21 @@
+type Book {
+  id: ID
+  author: String
+  country: String
+  imageLink: String
+  language: String
+  link: String
+  pages: Int
+  title: String
+  year: Int
+}
+
+type GetAll {
+  status: String
+  message: String
+  data: Book
+}
+
+input bookId {
+  bookId: ID!
+}

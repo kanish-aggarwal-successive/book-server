@@ -1,0 +1,4 @@
+type Query {
+    getBooks: GetAll!
+    getBookById(id: bookId): GetAll!
+}
