@@ -19,3 +19,37 @@ type GetAll {
 input bookId {
   bookId: ID!
 }
+
+input DeleteBook {
+  bookId: ID!
+}
+
+type GetMessage {
+  static: String
+  message: String
+  data: String
+}
+
+input CreateBook {
+  id: String
+  author: String
+  country: String
+  imageLink: String
+  language: String
+  link: String
+  pages: Int
+  title: String
+  year: Int
+}
+
+input UpdateBook {
+  id: String
+  author: String
+  country: String
+  imageLink: String
+  language: String
+  link: String
+  pages: Int
+  title: String
+  year: Int
+}

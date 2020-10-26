@@ -2,3 +2,9 @@ type Query {
     getBooks: GetAll!
     getBookById(id: bookId): GetAll!
 }
+
+type Mutation {
+    postBook(payload: CreateBook): GetAll!
+    putBook(payload: UpdateBook): Book!
+    deleteBook(payload: DeleteBook): GetMessage!
+}

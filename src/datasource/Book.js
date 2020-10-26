@@ -9,6 +9,14 @@ class BookAPI extends RESTDataSource {
         this.baseURL = config.url
     }
 
+    async postBook(payload) {
+        return await this.post('/create', payload);
+    }
+
+    async putBook(payload) {
+        return await this.put(`${payload.bookId}`, payload);
+    }
+
     async getBookById(id) {
         return await this.get(`/${id.bookId}`);
     }
@@ -16,6 +24,10 @@ class BookAPI extends RESTDataSource {
     async getBooks() {
         console.log("Apollo");
         return await this.get('/getBooks');
+    }
+
+    async deleteBook(payload) {
+        return await this.delete(`/${payload.bookId}`)
     }
 }
 

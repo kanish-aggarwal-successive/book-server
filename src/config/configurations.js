@@ -1,7 +1,7 @@
 import pkg from 'dotenv';
 const { config } = pkg;
 
-pkg.config();
+config();
 
 const configuration = Object.freeze({
     port: process.env.PORT,

@@ -13,6 +13,9 @@ export default {
     resolvers: {
         Query: {
             ...book.Query
+        },
+        Mutation: {
+            ...book.Mutation
         }
     },
     typeDefs,
