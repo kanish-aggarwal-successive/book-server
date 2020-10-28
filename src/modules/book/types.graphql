@@ -2,9 +2,7 @@ type Book {
   id: ID
   author: String
   country: String
-  imageLink: String
   language: String
-  link: String
   pages: Int
   title: String
   year: Int
@@ -34,9 +32,7 @@ input CreateBook {
   id: String
   author: String
   country: String
-  imageLink: String
   language: String
-  link: String
   pages: Int
   title: String
   year: Int
@@ -46,9 +42,7 @@ input UpdateBook {
   id: String
   author: String
   country: String
-  imageLink: String
   language: String
-  link: String
   pages: Int
   title: String
   year: Int
