@@ -1,18 +1,13 @@
 export default {
-    getBooks: async (parent, args, context) => {
-      const {
-        dataSources: {
-          BookAPI
-        },
-      } = context;
-      const response = await BookAPI.getBooks(args);
-      return response;
+    getBooks: async (parent, args, context, info) => {
+      const { dataSources: { BookAPI } } = context;
+      const books = await BookAPI.getBooks(args);
+      return books.books;
     },
 
-    getBookById: async (parent, args, context) => {
-      const { options: { bookId } } = args;
+    getBookById: async (parent, args, context, info) => {
       const { dataSources: { BookAPI } } = context;
-      const response = await BookAPI.getBookById({bookId});
-      return response;
-    }
+      const book = await BookAPI.getBookById(args._id)
+      return book
+  }
   };

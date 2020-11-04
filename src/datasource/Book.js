@@ -18,7 +18,7 @@ class BookAPI extends RESTDataSource {
     }
 
     async getBookById(id) {
-        return await this.get(`/${id.bookId}`);
+        return await this.get(`/getBook/${id}`);
     }
 
     async getBooks() {

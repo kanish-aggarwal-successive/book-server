@@ -1,6 +1,7 @@
 type Query {
-    getBooks: GetAll!
-    getBookById(id: bookId): GetAll!
+    getBooks: [Book!]!
+    # getBookById(_id: bookId): GetAll!
+    getBookById(_id: ID): Book
 }
 
 type Mutation {

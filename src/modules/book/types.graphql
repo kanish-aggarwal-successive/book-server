@@ -1,5 +1,5 @@
 type Book {
-  id: ID
+  _id: ID
   author: String
   country: String
   language: String
@@ -14,9 +14,9 @@ type GetAll {
   data: Book
 }
 
-input bookId {
-  bookId: ID!
-}
+# input bookId {
+#   bookId: ID!
+# }
 
 input DeleteBook {
   bookId: ID!
