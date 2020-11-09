@@ -1,7 +1,6 @@
 export default {
-    postBook: async (parent, args, context) => {
+    postBook: async (parent, args, context, info) => {
         const { payload: {
-            id,
             author,
             country,
             language,
@@ -9,9 +8,8 @@ export default {
             title,
             year
         } } = args;
-        const { dataSources: { eventApi } } = context;
-        const response = await eventApi.postBook({
-            id,
+        const { dataSources: { BookAPI } } = context;
+        const response = await BookAPI.postBook({
             author,
             country,
             language,
@@ -22,9 +20,9 @@ export default {
         return response;
     },
 
-    putBook: async (parent, args, context) => {
+    putBook: async (parent, args, context, info) => {
         const { payload: {
-            id,
+            _id,
             author,
             country,
             language,
@@ -32,9 +30,9 @@ export default {
             title,
             year
         } } = args;
-        const { dataSources: { bookApi } } = context;
-        const response = await bookApi.putBook({
-            id,
+        const { dataSources: { BookAPI } } = context;
+        const response = await BookAPI.putBook({
+            _id,
             author,
             country,
             language,
@@ -42,21 +40,13 @@ export default {
             title,
             year
         });
-        return response.data;
+        return response;
     },
 
     deleteBook: async (parent, args, context) => {
-        const {
-            payload: {
-                bookId
-            }
-        } = args;
-        const {
-            dataSources: {
-                bookApi
-            }
-        } = context;
-        const response = await bookApi.deleteBook({
+        const {payload: { bookId }} = args;
+        const { dataSources: { BookAPI } } = context;
+        const response = await BookAPI.deleteBook({
             bookId,
         });
         return response;

@@ -10,11 +10,11 @@ class BookAPI extends RESTDataSource {
     }
 
     async postBook(payload) {
-        return await this.post('/create', payload);
+        return await this.post('/getBooks', payload);
     }
 
     async putBook(payload) {
-        return await this.put(`${payload.bookId}`, payload);
+        return await this.put(`/edit/${payload._id}`, payload);
     }
 
     async getBookById(id) {
@@ -27,7 +27,7 @@ class BookAPI extends RESTDataSource {
     }
 
     async deleteBook(payload) {
-        return await this.delete(`/${payload.bookId}`)
+        return await this.delete(`/getBook/${payload.bookId}`)
     }
 }
 

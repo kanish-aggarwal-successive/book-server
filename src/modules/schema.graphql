@@ -1,11 +1,10 @@
 type Query {
     getBooks: [Book!]!
-    # getBookById(_id: bookId): GetAll!
-    getBookById(_id: ID): Book
+    getBookById(_id: ID): Book!
 }
 
 type Mutation {
-    postBook(payload: CreateBook): GetAll!
-    putBook(payload: UpdateBook): Book!
-    deleteBook(payload: DeleteBook): GetMessage!
+    postBook(payload: CreateBook): Book!
+    putBook(payload: UpdateBook!): Book!
+    deleteBook(payload: DeleteBook): Book!
 }

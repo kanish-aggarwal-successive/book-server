@@ -8,28 +8,11 @@ type Book {
   year: Int
 }
 
-type GetAll {
-  status: String
-  message: String
-  data: Book
-}
-
-# input bookId {
-#   bookId: ID!
-# }
-
 input DeleteBook {
   bookId: ID!
 }
 
-type GetMessage {
-  static: String
-  message: String
-  data: String
-}
-
 input CreateBook {
-  id: String
   author: String
   country: String
   language: String
@@ -38,8 +21,12 @@ input CreateBook {
   year: Int
 }
 
+input id {
+  _id: ID!
+}
+
 input UpdateBook {
-  id: String
+  _id: ID
   author: String
   country: String
   language: String
