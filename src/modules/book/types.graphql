@@ -1,0 +1,36 @@
+type Book {
+  _id: ID
+  author: String
+  country: String
+  language: String
+  pages: Int
+  title: String
+  year: Int
+}
+
+input DeleteBook {
+  bookId: ID!
+}
+
+input CreateBook {
+  author: String
+  country: String
+  language: String
+  pages: Int
+  title: String
+  year: Int
+}
+
+input id {
+  _id: ID!
+}
+
+input UpdateBook {
+  _id: ID
+  author: String
+  country: String
+  language: String
+  pages: Int
+  title: String
+  year: Int
+}

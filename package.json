@@ -1,0 +1,37 @@
+{
+  "name": "book-server",
+  "version": "1.0.0",
+  "description": "Apollo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/index.js"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kanishaggarwal94/book-server.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kanishaggarwal94/book-server/issues"
+  },
+  "homepage": "https://github.com/kanishaggarwal94/book-server#readme",
+  "dependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/node": "^7.12.1",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/preset-env": "^7.12.1",
+    "apollo-datasource-rest": "^0.9.4",
+    "apollo-server-express": "^2.18.2",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-graphql": "^0.11.0",
+    "graphql": "^15.3.0",
+    "graphql-playground-middleware-express": "^1.7.22",
+    "merge-graphql-schemas": "^1.7.8"
+  }
+}

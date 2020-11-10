@@ -1,0 +1,10 @@
+type Query {
+    getBooks: [Book!]!
+    getBookById(_id: ID): Book!
+}
+
+type Mutation {
+    postBook(payload: CreateBook): Book!
+    putBook(payload: UpdateBook!): Book!
+    deleteBook(payload: DeleteBook): Book!
+}
